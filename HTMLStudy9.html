@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+
+    <h1> 텍스트 입력 </h1>
+    <form action="/examples/media/request.php">
+        검색할 내용을 입력하세요 :
+        <input type="text" name="search">
+    </form>
+
+    <h1>value 속성을 이용한 초기값 설정</h1>
+    <form action="/examples/media/request.php">
+        이름 : <br>
+        <input type="text" name="student_name"><br>
+        학번 : <br>
+        <input type="text" name="student_id"><br>
+        학과 : <br>
+        <input type="text" name="department" value="컴퓨터공학과"><br><br>
+        <input type="submit" value="전송">
+    </form>
+
+</body>
+</html>
