@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>flexible box 7</title>
+    <style>
+        .flexbox {
+            background-color: dimgray;
+            width: 200px;
+            height: 300px;
+            border-radius: 15px;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        #space_between {
+            -webkit-align-content: space-between;
+            align-content: space-between;
+        }
+
+        #space_around {
+            -webkit-align-content: space-around;
+            align-content: space-around;
+        }
+
+        .item {
+            background-color: darkgray;
+            border-radius: 10px;
+            width: 80px;
+            margin: 10px;
+            color: white;
+            font-size: 26px;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>align-content 속성을 이용한 분포 설정</h1>
+
+    <h3>align-content의 속성값이 stretch입니다.</h3>
+    <div id="stretch" class="flexbox">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <h3>align-content의 속성값이 space-between입니다.</h3>
+    <div id="space_between" class="flexbox">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <h3>align-content의 속성값이 space-around입니다.</h3>
+    <div id="space_around" class="flexbox">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+</body>
+
+</html>
