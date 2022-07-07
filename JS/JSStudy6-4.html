@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>variables 4</title>
+</head>
+
+<body>
+
+    <h1>초기화하지 않은 변수의 값</h1>
+    <p id="result"></p>
+
+    <script>
+        var num;	// 변수의 선언
+        document.getElementById("result").innerHTML = num + "<br>";
+        num = 10;	// 변수의 초기화
+        document.getElementById("result").innerHTML += num;
+    </script>
+
+</body>
+
+</html>
