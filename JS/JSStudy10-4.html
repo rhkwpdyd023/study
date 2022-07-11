@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>iteration statements 4</title>
+</head>
+
+<body>
+
+	<h1>for / of 문</h1>
+
+	<script>
+		var arr = [3, 4, 5];
+
+		for (var i = 0; i < arr.length; i++) { // 배열 arr의 모든 요소의 인덱스(index)를 출력함.
+			document.write(arr[i] + " ");
+		}
+		document.write("<br>");
+
+		for (var value of arr) { // 위와 같은 동작을 하는 for / of 문
+			document.write(value + " ");
+		}
+	</script>
+
+	<h1>for / of 문2</h1>
+
+	<script>
+		var arr = new Set([1, 1, 2, 2, 3, 3]);
+
+		for (var value of arr) {
+			document.write(value + " ");
+		}
+	</script>
+
+</body>
+
+</html>
