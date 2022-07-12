@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>continue</title>
+</head>
+
+<body>
+
+	<h1>continue 문</h1>
+
+	<script>
+		var exceptNum = 3;
+
+		for (var i = 0; i <= 100; i++) {
+			if (i % exceptNum == 0) // exceptNum의 배수는 출력하지 않음.
+				continue;
+			document.write(i + " ");
+		}
+	</script>
+
+	<h1>continue 문 2</h1>
+
+	<script>
+		gugudan:
+		for (var i = 2; i <= 9; i++) {
+			dan:
+			for (var j = 1; j <= 9; j++) {
+				if ((i * j) % 2 == 0)
+					continue dan;
+				document.write(i + " * " + j + " = " + (i * j) + "<br>");
+			}
+		}
+	</script>
+
+</body>
+
+</html>
