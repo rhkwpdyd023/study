@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>object property</title>
+</head>
+
+<body>
+
+	<h1>객체의 hasOwnProperty() 메소드</h1>
+
+	<script>
+		function Dog(color, name, age, family) {
+			this.color = color;
+			this.name = name;
+			this.age = age;
+			this.family = family;
+			this.breed = function () { return this.color + " " + this.family; }
+		}
+		var myDog = new Dog("검정색", "곰", 3, "불독");
+
+		document.write(myDog.hasOwnProperty("color") + "<br>");	// true
+		document.write(myDog.hasOwnProperty("breed") + "<br>");	// true
+		document.write(myDog.hasOwnProperty("class"));			// 상속받은 속성이므로 false를 반환함.
+	</script>
+
+	<h1>객체의 propertyIsEnumerable() 메소드</h1>
+
+	<script>
+		function Dog(color, name, age) {
+			this.color = color;
+			this.name = name;
+			this.age = age;
+		}
+		var myDog = new Dog("흰색", "마루", 1);
+		// color 프로퍼티의 enumerable 속성을 false로 설정함.
+		Object.defineProperty(myDog, 'color', { enumerable: false });
+
+		document.write(myDog.propertyIsEnumerable("color") + "<br>");	// false
+		document.write(myDog.propertyIsEnumerable("name") + "<br>");	// true
+		document.write(myDog.propertyIsEnumerable("age"));				// true
+	</script>
+
+	<h1>객체의 isPrototypeOf() 메소드</h1>
+
+	<script>
+		var day = new Date(); 	// Date 객체를 생성함.
+
+		// 객체 day의 프로토타입이 Date.prototype인지를 검사함.
+		document.write(Date.prototype.isPrototypeOf(day) + "<br>");	// true
+		document.write(Date.prototype.isPrototypeOf(new String()));	// false
+	</script>
+
+</body>
+
+</html>
