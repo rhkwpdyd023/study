@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>date object 2</title>
+</head>
+
+<body>
+
+    <h1>Long 날짜 양식</h1>
+
+    <script>
+        document.write(new Date("Feb 19 1982") + "<br>");		// MMM DD YYYY
+        document.write(new Date("19 Feb 1982") + "<br>");		// DD MMM YYYY
+        document.write(new Date("February 19 1982") + "<br>");	// 월의 축약형 뿐만 아니라 전체 단어도 인식함.
+        document.write(new Date("FEBRUARY, 19, 1982"));			// 쉼표는 무시되며, 대소문자의 구분은 없음.
+    </script>
+
+    <h1>Short 날짜 양식</h1>
+
+    <script>
+        document.write(new Date("02/19/1982") + "<br>");	// MM/DD/YYYY
+        document.write(new Date("1982/02/19"));				// YYYY/MM/DD
+    </script>
+
+    <h1>Full 날짜 양식</h1>
+
+    <script>
+        document.write(new Date("Wed May 25 2016 17:00:00 GMT+0900 (Seoul Time)") + "<br>");
+        // GMT가 현재 국가와 다른 시간은 현재 국가의 GMT로 변환되어 표현됨.
+        document.write(new Date("Wed May 25 2016 17:00:00 GMT-0500 (New York Time)"));
+    </script>
+
+</body>
+
+</html>
