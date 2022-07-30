@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>array method 2</title>
+</head>
+
+<body>
+
+	<h1>push() 메소드</h1>
+
+	<script>
+		var arr = [1, true, "JavaScript"];
+
+		document.write(arr.length + "<br>");	// 3
+		arr.push("자바스크립트");
+		document.write(arr.length + "<br>");	// 4
+		document.write(arr + "<br><br>");		// [1,true,JavaScript,자바스크립트]
+
+		arr.push(2, "거짓");
+		document.write(arr.length + "<br>");	// 6
+		document.write(arr);					// [1,true,JavaScript,자바스크립트,2,거짓]
+	</script>
+
+	<h1>pop() 메소드</h1>
+
+	<script>
+		var arr = [1, true, "JavaScript", "자바스크립트"];
+
+		document.write(arr.length + "<br>");	// 4
+		document.write(arr.pop() + "<br>");		// 자바스크립트
+		document.write(arr.length + "<br>");	// 3
+		document.write(arr.pop() + "<br>");		// JavaScript
+		document.write(arr.length + "<br>");	// 2
+		document.write(arr);					// [1,true]
+	</script>
+
+	<h1>shift() 메소드</h1>
+
+	<script>
+		var arr = [1, true, "JavaScript", "자바스크립트"];
+
+		document.write(arr.length + "<br>");	// 4
+		document.write(arr.shift() + "<br>");	// 1
+		document.write(arr.length + "<br>");	// 3
+		document.write(arr.shift() + "<br>");	// true
+		document.write(arr.length + "<br>");	// 2
+		document.write(arr);					// [JavaScript,자바스크립트]
+	</script>
+
+	<h1>unshift() 메소드</h1>
+
+	<script>
+		var arr = [1, true, "JavaScript"];
+
+		document.write(arr.length + "<br>");	// 3
+		arr.unshift("자바스크립트");
+		document.write(arr.length + "<br>");	// 4
+		document.write(arr + "<br><br>");		// [자바스크립트,1,true,JavaScript]
+
+		arr.unshift(2, "거짓");
+		document.write(arr.length + "<br>");	// 6
+		document.write(arr);					// [2,거짓,자바스크립트,1,true,JavaScript]
+	</script>
+
+</body>
+
+</html>
