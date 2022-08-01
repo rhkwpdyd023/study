@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>nord access</title>
+</head>
+
+<body>
+
+    <h1>nodeName 프로퍼티</h1>
+    <p id="document"></p>
+    <p id="html"></p>
+
+    <script>
+        // HTML 문서의 모든 자식 노드 중에서 두 번째 노드의 이름을 선택함.
+        document.getElementById("document").innerHTML = document.childNodes[1].nodeName;			// HTML
+
+        // html 노드의 모든 자식 노드 중에서 첫 번째 노드의 이름을 선택함.
+        document.getElementById("html").innerHTML = document.childNodes[1].childNodes[0].nodeName;	// HEAD
+    </script>
+
+    <h1 id="heading">nodeValue 프로퍼티</h1>
+    <p id="text1">텍스트</p>
+    <p id="text2">텍스트</p>
+
+    <script>
+        // 아이디가 "heading"인 요소의 첫 번째 자식 노드의 노드값을 선택함.
+        var headingText = document.getElementById("heading").firstChild.nodeValue;
+
+        document.getElementById("text1").innerHTML = headingText;
+        document.getElementById("text2").firstChild.nodeValue = headingText;
+    </script>
+
+</body>
+
+</html>
