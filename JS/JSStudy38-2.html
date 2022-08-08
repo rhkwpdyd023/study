@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>event 2</title>
+</head>
+
+<body>
+
+    <h1>addEventListener() 메소드</h1>
+    <button id="btn">텍스트 보여주기!</button>
+    <p id="text"></p>
+
+    <script>
+        var showBtn = document.getElementById("btn");	// 아이디가 "btn"인 요소를 선택함.
+        showBtn.addEventListener("click", showText);	// 선택한 요소에 click 이벤트 리스너를 등록함.
+        function showText() {
+            document.getElementById("text").innerHTML = "짜잔~!! 텍스트가 나타났어요!!";
+        }
+    </script>
+
+    <h1>여러 개의 이벤트 리스너 등록</h1>
+    <p>아래 버튼에 마우스를 올리거나 클릭해 보세요!</p>
+    <button id="btn1">버튼</button>
+    <p id="text1"></p>
+
+    <script>
+        var btn1 = document.getElementById("btn1");			// 아이디가 "btn"인 요소를 선택함.
+        btn1.addEventListener("click", clickBtn);			// 선택한 요소에 click 이벤트 리스너를 등록함.
+        btn1.addEventListener("mouseover", mouseoverBtn);	// 선택한 요소에 mouseover 이벤트 리스너를 등록함.
+        btn1.addEventListener("mouseout", mouseoutBtn);		// 선택한 요소에 mouseout 이벤트 리스너를 등록함.
+
+        function clickBtn() {
+            document.getElementById("text1").innerHTML = "버튼이 클릭됐어요!";
+        }
+        function mouseoverBtn() {
+            document.getElementById("text1").innerHTML = "버튼 위에 마우스가 있네요!";
+        }
+        function mouseoutBtn() {
+            document.getElementById("text1").innerHTML = "버튼 밖으로 마우스가 나갔어요!";
+        }
+    </script>
+
+    <h1>이벤트 리스너 삭제</h1>
+    <p>아래 버튼에 마우스를 올리거나 클릭해 보세요!</p>
+    <button id="btn2">삭제 버튼</button>
+    <p id="text2"></p>
+
+    <script>
+        var btn2 = document.getElementById("btn2");			// 아이디가 "btn"인 요소를 선택함.
+        btn2.addEventListener("click", clickBtn);			// 선택한 요소에 click 이벤트 리스너를 등록함.
+        btn2.addEventListener("mouseover", mouseoverBtn);	// 선택한 요소에 mouseover 이벤트 리스너를 등록함.
+        btn2.addEventListener("mouseout", mouseoutBtn);		// 선택한 요소에 mouseout 이벤트 리스너를 등록함.
+
+        function clickBtn() {
+            btn2.removeEventListener("mouseover", mouseoverBtn);
+            btn2.removeEventListener("mouseout", mouseoutBtn);
+            document.getElementById("text2").innerHTML = "이벤트 리스너가 삭제되었어요!";
+        }
+        function mouseoverBtn() {
+            document.getElementById("text2").innerHTML = "버튼 위에 마우스가 있네요!";
+        }
+        function mouseoutBtn() {
+            document.getElementById("text2").innerHTML = "버튼 밖으로 마우스가 나갔어요!";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>event</title>
+</head>
+
+<body>
+
+    <h1>이벤트 타입</h1>
+    <p onclick="changeText(this)">이 문자열을 클릭해 보세요!</p>
+
+    <script>
+        function changeText(element) {
+            element.innerHTML = "문자열의 내용이 바뀌었습니다!";
+        }
+    </script>
+
+    <h1>자바스크립트 코드에서 프로퍼티로 등록</h1>
+    <p id="text1">이 문자열은 HTML 문서가 로드되면 다른 문자열로 바뀔 것입니다.</p>
+
+    <script>
+        window.onload = function () {   // 이 함수는 HTML 문서가 로드될 때 실행됨.
+            var text = document.getElementById("text1");     // 아이디가 "text" 인 요소를 선택함.
+            text.innerHTML = "HTML 문서가 로드되었습니다.";
+        }
+    </script>
+
+    <h1>HTML 태그 내의 속성으로 등록</h1>
+    <p onclick="alert('문자열을 클릭했어요!')">이 문자열을 클릭해 보세요!</p>
+
+</body>
+
+</html>
