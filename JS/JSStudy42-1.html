@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>regular expression</title>
+</head>
+
+<body>
+
+    <h1>정규 표현식의 생성</h1>
+    <p id="text"></p>
+
+    <script>
+        var regStr = /a+bc/;				// 정규 표현식 리터럴을 이용한 생성
+        var regObj = new RegExp("a+bc");	// RegExp 객체를 이용한 생성
+        document.getElementById("text").innerHTML = regStr + "<br>" + regObj;
+    </script>
+
+    <h1>단순한 패턴 검색</h1>
+    <p id="text"></p>
+
+    <script>
+        var targetStr = "간장 공장 공장장은 강 공장장이고, 된장 공장 공장장은 장 공장장이다."
+        var strReg1 = /공장/;
+        var strReg2 = /장공/;
+
+        document.write(targetStr.search(strReg1) + "<br>");
+        document.write(targetStr.search(strReg2));
+    </script>
+
+</body>
+
+</html>
