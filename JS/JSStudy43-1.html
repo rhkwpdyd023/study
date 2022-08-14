@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>regular expression 2</title>
+</head>
+
+<body>
+
+    <h1>특수 문자 '\d'</h1>
+    <p id="text"></p>
+
+    <script>
+        var text = document.getElementById("text");
+
+        var targetStr = "ab1bc2cd3de";
+        var reg1 = /\d/;			// 0부터 9까지의 숫자를 검색함.
+        var reg2 = /[3-9]/;			// 3부터 9까지의 숫자를 검색함.
+
+        text.innerHTML = targetStr.search(reg1) + "<br>";
+        text.innerHTML += targetStr.search(reg2);
+    </script>
+
+    <h1>특수 문자 '\s'와 '\w'</h1>
+    <p id="text1"></p>
+
+    <script>
+        var text = document.getElementById("text1");
+
+        var targetStr = "abc 123";
+        // 공백 문자를 사이에 두는 언더스코어(_)를 포함한 영문자 및 숫자로 이루어진 문자열을 검색함.
+        var reg = /\w\s\w/;
+
+        text.innerHTML = targetStr.match(reg);
+    </script>
+
+</body>
+
+</html>

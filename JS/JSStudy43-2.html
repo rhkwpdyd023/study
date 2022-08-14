@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>regular expressin 3</title>
+</head>
+
+<body>
+
+	<h1>특수 문자 '\b'</h1>
+	<p id="text"></p>
+
+	<script>
+		var text = document.getElementById("text");
+
+		var targetStr1 = "abc123abc";
+		var targetStr2 = "abc 123 abc";
+		var targetStr3 = "abc@123!abc";
+
+		// 단어의 맨 앞이나 맨 뒤에 부분 문자열 "bc"가 존재하는지를 검색함.
+		var reg = /bc\b/;
+
+		text.innerHTML = targetStr1.search(reg) + "<br>";
+		text.innerHTML += targetStr2.search(reg) + "<br>";
+		text.innerHTML += targetStr3.search(reg);
+	</script>
+
+	<h1>정규 표현식의 양화사</h1>
+	<p id="text1"></p>
+
+	<script>
+		var targetStr = "Hello World!";
+		var zeroReg = /lo*/;		// 문자 'l' 다음에 문자 'o'가 0번 이상 나타나는 경우를 검색함.
+		var oneReg = /lo+/;			// 문자 'l' 다음에 문자 'o'가 1번 이상 나타나는 경우를 검색함.
+		var zeroOneReg = /lo?/;		// 문자 'l' 다음에 문자 'o'가 0 또는 1번만 나타나는 경우를 검색함.
+		document.getElementById("text1").innerHTML =
+			targetStr.search(zeroReg) + "<br>" + targetStr.search(oneReg) + "<br>" + targetStr.search(zeroOneReg);
+	</script>
+
+	<h1>정규 표현식의 양화사</h1>
+	<p id="text2"></p>
+
+	<script>
+		var targetStr = "123abc";
+		var oneReg = /\d+/;			// 숫자를 검색함. [0-9]와 같음.
+		var anotherReg = /\d+?/;	// 숫자를 검색하지만, 가능한 적은 수의 문자를 가지는 패턴을 검색함.
+		document.getElementById("text2").innerHTML =
+			targetStr.match(oneReg) + "<br>" + targetStr.match(anotherReg);
+	</script>
+
+</body>
+
+</html>
