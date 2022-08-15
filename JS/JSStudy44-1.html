@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>regular expression 4</title>
+</head>
+
+<body>
+
+	<h1>정규 표현식의 괄호</h1>
+	<p id="text"></p>
+
+	<script>
+		var targetStr = "Hong Gil Dong";
+		var nameReg = /(\w+)\s(\w+)\s(\w+)/;					// 공백 문자를 기준으로 각 부분 문자열을 저장함.
+		var engName = targetStr.replace(nameReg, "$2 $3 $1");	// 첫 번째 부분 문자열을 맨 마지막으로 위치시킴.
+		document.getElementById("text").innerHTML = engName;
+	</script>
+
+	<h1>정규 표현식의 괄호</h1>
+	<p id="text1"></p>
+
+	<script>
+		var targetStr = "abc 123 abc 123";
+		var oneReg = /(\w+) (\d+)/;				// abc 123, abc, 123
+		var anotherReg = /(\w+) (\d+) \1 \2/;	// abc 123 abc 123, abc, 123
+		document.getElementById("text1").innerHTML =
+			targetStr.match(oneReg) + "<br>" + targetStr.match(anotherReg);
+	</script>
+
+	<h1>정규 표현식의 위치 문자</h1>
+	<p id="text2"></p>
+
+	<script>
+		var firstStr = "Php";
+		var secondStr = "phP";
+		var strReg = /^p/;			// 단어의 맨 처음에 문자 'p'가 나타나는 경우를 검색함.
+		document.getElementById("text2").innerHTML =
+			firstStr.match(strReg) + "<br>" + secondStr.match(strReg);
+	</script>
+
+</body>
+
+</html>
