@@ -15,7 +15,7 @@
 		var targetStr = "Hong Gil Dong";
 		var nameReg = /(\w+)\s(\w+)\s(\w+)/;					// 공백 문자를 기준으로 각 부분 문자열을 저장함.
 		var engName = targetStr.replace(nameReg, "$2 $3 $1");	// 첫 번째 부분 문자열을 맨 마지막으로 위치시킴.
-		document.getElementById("text").innerHTML = engName;
+		document.getElementById("text").innerHTML = engName; 
 	</script>
 
 	<h1>정규 표현식의 괄호</h1>
@@ -28,8 +28,7 @@
 		document.getElementById("text1").innerHTML =
 			targetStr.match(oneReg) + "<br>" + targetStr.match(anotherReg);
 	</script>
-
-	<h1>정규 표현식의 위치 문자</h1>
+		<h1>정규 표현식의 위치 문자</h1>
 	<p id="text2"></p>
 
 	<script>
