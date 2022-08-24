@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>dialog tag</title>
+</head>
+
+<body>
+
+    <!--dialog 태그는 대화 상자(dialog box)나 대화 윈도우(dialog window)를 정의할 때 사용-->
+    <p>엣지와 익스플로러, 사파리 브라우저는 dialog 요소를 지원하지 않습니다.</p>
+    <dialog open>
+        <h2>돼지 저금통</h2>
+        <label for="money">지갑에 동전을 얼마 넣을까요?</label>
+        <div><input name="amount" id="money" type="number" min="0" step="100" value="100"></div>
+        <div><input name="round" type="checkbox">1,000원 단위로 넣기</div>
+        <button type="submit" value="saving">동전 넣기</button>
+    </dialog>
+
+</body>
+
+</html>
