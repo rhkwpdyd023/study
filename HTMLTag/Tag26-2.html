@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>template tag</title>
+</head>
+
+<body>
+
+    <!--<template> 태그는 추가되거나 복사될 수 있는 HTML 요소들을 정의할 때 사용-->
+    <p>아래 버튼을 클릭하면, 웹 페이지에 그림이 나타납니다.</p>
+
+    <button onclick="displayTemplate()">모나리자</button>
+
+    <template>
+        <h3>모나리자</h3>
+        <img src="monalisa.jpg" alt="모나리자">
+    </template>
+
+    <script>
+        function displayTemplate() {
+            var frag = document.getElementsByTagName('template')[0];
+            var copy = frag.content.cloneNode(true);
+            document.body.appendChild(copy);
+        }
+    </script>
+
+</body>
+
+</html>
