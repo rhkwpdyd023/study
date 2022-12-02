@@ -9,7 +9,7 @@ int main(){
 
     count = 0;
 
-    cin >> word;
+    getline(cin, word);
 
     if(word[0] != ' '){
         count ++;
