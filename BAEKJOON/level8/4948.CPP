@@ -4,34 +4,41 @@ using namespace std;
 int main(){
 
     int N, count;
-    int arr[246913] = {0, };
-    count = 0;
+    int arr[300000];
+    
+    while(1){
 
-    arr[0] = 1; 
-    arr[1] = 1;
+        count = 0;
+        
+        cin >> N;
 
-    cin >> N;
-
-    for(int i=2;i<246913/i;i++){
-        if(arr[i] == 1){
-            continue;
+        for(int i=0;i<=2*N;i++){
+            arr[i] = 0;
         }
-        for(int j=i*i;j<246913;j+=i){
-            if(j % i == 0){
-                arr[j] = 1;
+
+        if(N == 0){
+            break;
+        }
+
+        for(int i=2;i<=2*N;i++){
+            if(arr[i] == 0){
+                arr[i] = 0;
+            }
+            for(int j=i+i;j<=2*N;j+=i){
+                if(arr[j] != 1){
+                    arr[j] = 1;
+                }
             }
         }
-    }
-    
-    while(N != 0){
-        count = 0;
-        for(int i=N+1;i<=N*2;i++){
+
+        for(int i=N+1;i<=2*N;i++){
             if(arr[i] == 0){
                 count ++;
             }
-            cout << count << endl;
-            cin >> N;
         }
+
+        cout << count << endl;
+
     }
 
     return 0;
