@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <script>
+        // 할당 연산자 체이닝
+        let a, b, c;
+
+        a = b = c = 2 + 2;
+        
+        alert(a); // 4
+        alert(b); // 4
+        alert(c); // 4
+
+        c = 2 + 2;
+        b = c;
+        a = c;
+
+        // 복합 할당 연산자
+        let n = 2;
+        n += 5; // 7
+        n *= 2; // 14
+
+        alert(n); // 14
+    </script>
+
+</body>
+
+</html>
