@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <script>
+        let login = prompt("당신은 누구입니까?", "");
+
+        let message = (login == "직원") ? "안녕하세요" :
+        (login == "임원") ? "환영합니다." :
+        (login == "") ? "로그인이 필요합니다." :
+        "";
+
+        alert(message);
+    </script>
+
+</body>
