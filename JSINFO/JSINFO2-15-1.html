@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <script>
+        // 함수
+        function showMessage(){
+            alert("안녕하세요!");
+        }
+        showMessage();
+        showMessage();
+
+        let userName = "John";
+
+        function showMessage2(){
+            userName = "Bob";
+
+            let message = "hello, " + userName;
+            alert(message);
+        }
+
+        alert(userName); // John
+        
+        showMessage2();
+
+        alert(userName); // Bob
+
+    </script>
+
+</body>
