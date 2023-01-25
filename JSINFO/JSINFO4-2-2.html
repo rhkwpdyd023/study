@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <script>
+        // 중첩 객체 복사
+        let user = {
+            name: "John",
+            sizes: {
+                height: 182,
+                width: 50
+            }
+        };
+
+        let clone = Object.assign({}, user);
+
+        alert(user.sizes === clone.sizes); //true
+
+        user.sizes.width++;
+        alert(clone.size.width); // 51
+    </script>
+
+</body>
