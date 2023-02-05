@@ -5,7 +5,8 @@ h1{
 }
 
 #description{
-    margin-bottom: 64px;
+    margin: 0px;
+    padding-bottom: 50px;
 }
 
 a{
@@ -15,6 +16,7 @@ a{
     border: ipx solid rgb(167, 1, 78);
     border-radius: 4px;
     font-size: 24px;
+    margin: 30px;
 }
 
 a:hover{
