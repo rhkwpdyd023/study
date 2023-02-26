@@ -8,7 +8,37 @@
   </head>
   <body>
     <form action="/" method="GET">
-      <input type="text" name="user-name"/>
+      <label for="username">이름을 입력해주세요.</label>
+      <input type="text" name="user-name" id="username" value="이름" />
+      <label for="useremail">이메일을 입력해주세요.</label>
+      <input type="email" name="user-email" id="useremail" />
+      <label for="userage">나이를 입력해주세요.</label>
+      <input type="number" step="1" name="user-age" id="userage" />
+      <label for="userpassword" name="user-password" id="userpassword"
+        >비밀번호를 입력해주세요.</label
+      >
+      <input type="password" name="user-password" id="userpassword" />
+      <label for="birthdate">생일을 입력해주세요.</label>
+      <input type="date" id="birthdate" name="user-birhdate" />
+      <hr />
+      <h2>어떻게 당신 계정을 인증할까요?</h2>
+      <div class="form-control-inline">
+        <input
+          type="radio"
+          name="verify"
+          id="verify-text-message"
+          value="text-message"
+        />
+        <label for="verify-text-message">문자로 인증</label>
+      </div>
+      <div class="form-control-inline">
+        <input type="radio" name="verify" id="verify-email" value="email" />
+        <label for="verify-email">이메일로 인증</label>
+      </div>
+      <div class="form-control-inline">
+        <input type="radio" name="verify" id="verify-phone" value="phone" />
+        <label for="verify-phone">전화로 인증</label>
+      </div>
       <button>제출</button>
     </form>
   </body>
