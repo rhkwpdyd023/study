@@ -7,39 +7,160 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <form action="/" method="GET">
-      <label for="username">이름을 입력해주세요.</label>
-      <input type="text" name="user-name" id="username" value="이름" />
-      <label for="useremail">이메일을 입력해주세요.</label>
-      <input type="email" name="user-email" id="useremail" />
-      <label for="userage">나이를 입력해주세요.</label>
-      <input type="number" step="1" name="user-age" id="userage" />
-      <label for="userpassword" name="user-password" id="userpassword"
-        >비밀번호를 입력해주세요.</label
-      >
-      <input type="password" name="user-password" id="userpassword" />
-      <label for="birthdate">생일을 입력해주세요.</label>
-      <input type="date" id="birthdate" name="user-birhdate" />
-      <hr />
-      <h2>어떻게 당신 계정을 인증할까요?</h2>
-      <div class="form-control-inline">
-        <input
-          type="radio"
-          name="verify"
-          id="verify-text-message"
-          value="text-message"
-        />
-        <label for="verify-text-message">문자로 인증</label>
-      </div>
-      <div class="form-control-inline">
-        <input type="radio" name="verify" id="verify-email" value="email" />
-        <label for="verify-email">이메일로 인증</label>
-      </div>
-      <div class="form-control-inline">
-        <input type="radio" name="verify" id="verify-phone" value="phone" />
-        <label for="verify-phone">전화로 인증</label>
-      </div>
-      <button>제출</button>
-    </form>
+    <header>
+      <h1>Demo Form</h1>
+    </header>
+    <main>
+      <form action="/" method="GET">
+        <section>
+          <h2>당신의 개인정보</h2>
+          <ul>
+            <li>
+              <label for="username">이름을 입력해주세요.</label>
+              <input
+                type="text"
+                name="user-name"
+                id="username"
+                required
+                placeholder="엄준식"
+              />
+            </li>
+            <li>
+              <label for="useremail">이메일을 입력해주세요.</label>
+              <input type="email" name="user-email" id="useremail" required />
+            </li>
+            <li>
+              <label for="userpassword" name="user-password" id="userpassword"
+                >비밀번호를 입력해주세요.</label
+              >
+              <input
+                type="password"
+                name="user-password"
+                id="userpassword"
+                required
+                minlength="7"
+              />
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>세부 정보</h2>
+          <ul>
+            <li>
+              <label for="userage">나이를 입력해주세요.</label>
+              <input
+                type="number"
+                step="1"
+                name="user-age"
+                id="userage"
+                required
+                min="18"
+                max="100"
+              />
+            </li>
+            <li>
+              <label for="birthdate">생일을 입력해주세요.</label>
+              <input
+                type="date"
+                id="birthdate"
+                name="user-birhdate"
+                required
+                min="1921-01-01"
+                max="2003-01-01"
+              />
+            </li>
+            <li>
+              <label for="favorite-color">좋아하는 색깔은 무슨색입니까?</label>
+              <select id="favorite-color" name="favorite-color">
+                <option value="blue">파랑</option>
+                <option value="black">검정</option>
+                <option value="red">빨강</option>
+              </select>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <label for="usermessage">하고싶은말</label>
+          <textarea id="usermessage" name="user-message" required rows="8"></textarea>
+        </section>
+
+        <section>
+          <h2>어떻게 당신 계정을 인증할까요?</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-text-message"
+                value="text-message"
+                required
+              />
+              <label for="verify-text-message">문자로 인증</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-email"
+                value="email"
+                required
+              />
+              <label for="verify-email">이메일로 인증</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-phone"
+                value="phone"
+                required
+              />
+              <label for="verify-phone">전화로 인증</label>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>추가 동의사항</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input
+                type="checkbox"
+                id="contact-email"
+                name="terms"
+                value="email"
+              />
+              <label for="contact-email">이메일로 정보를 받으시겠습니까?</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="checkbox"
+                id="contact-phone"
+                name="terms"
+                value="phone"
+              />
+              <label for="contact-phone"
+                >휴대폰으로 정보를 받으시겠습니까?</label
+              >
+            </li>
+          </ul>
+        </section>
+
+        <hr />
+
+        <section>
+          <div class="form-control-inline">
+            <input type="checkbox" id="agree-terms" name="terms" />
+            <label for="agree-terms">위 약관에 동의하십니까?</label>
+          </div>
+        </section>
+
+        <section>
+          <button type="submit">제출</button>
+        </section>
+      </form>
+    </main>
   </body>
 </html>
