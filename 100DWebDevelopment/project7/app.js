@@ -18,3 +18,12 @@ age = 45;
 totalAdultYears = calculateAdultYears(age);
 
 alert(totalAdultYears);
+
+let person = {
+  name: 'max',
+  greet(){
+    alert('hello');
+  }
+};
+
+person.greet();
