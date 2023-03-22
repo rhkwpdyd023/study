@@ -22,8 +22,8 @@ function selectGameField(event) {
   const selectedColumn = selectedField.dataset.col - 1;
   const selectedRow = selectedField.dataset.row - 1;
 
-  if(gameData[selectedRow][selectedColumn] > 0 ){
-    alert('Please select an empty field!')
+  if (gameData[selectedRow][selectedColumn] > 0) {
+    alert("Please select an empty field!");
     return;
   }
 
@@ -33,4 +33,13 @@ function selectGameField(event) {
   gameData[selectedRow][selectedColumn] = activePlayer + 1;
 
   switchPlayer();
+}
+
+function checkForGameover() {
+  if (gameData[0][0] === 1 && gameData[0][1] === 1 && gameData[0][2] === 1) {
+    return 1;
+  }
+  if (gameData[0][0] === 2 && gameData[0][1] === 2 && gameData[0][2] === 2) {
+    return 2;
+  }
 }
