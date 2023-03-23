@@ -36,10 +36,27 @@ function selectGameField(event) {
 }
 
 function checkForGameover() {
-  if (gameData[0][0] === 1 && gameData[0][1] === 1 && gameData[0][2] === 1) {
-    return 1;
-  }
-  if (gameData[0][0] === 2 && gameData[0][1] === 2 && gameData[0][2] === 2) {
-    return 2;
+  if (
+    gameData[0][0] > 0 &&
+    gameData[0][0] === gameData[0][1] &&
+    gameData[0][1] === gameData[0][2]
+  ) {
+    return gameData[0][0];
   }
 }
+
+  if (
+    gameData[1][0] > 0 &&
+    gameData[1][0] === gameData[1][1] &&
+    gameData[1][1] === gameData[1][2]
+  ) {
+    return gameData[1][0];
+  }
+
+    if (
+      gameData[2][0] > 0 &&
+      gameData[2][0] === gameData[2][1] &&
+      gameData[2][1] === gameData[2][2]
+    ) {
+      return gameData[2][0];
+    }
