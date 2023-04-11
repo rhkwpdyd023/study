@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <%- include('includes/head') %>
-    <link rel="stylesheet" href="styles/restaurant.css">
+    <link rel="stylesheet" href="/styles/restaurant.css">
   </head>
   <body>
     <%- include('includes/header') %>
@@ -16,7 +16,7 @@
       <p>We found <%= numberOfRestaurants %> restaurants.</p>
       <ul id="restaurants-list">
         <% for(const restaurant of restaurants ) { %>
-          <%- include('include/restaurants/restaurant-item', {restaurant: restaurant}) %>
+          <%- include('includes/restaurants/restaurant-item', {restaurant: restaurant}) %>
         <% } %>
       </ul>
       <% } %>
