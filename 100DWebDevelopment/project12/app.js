@@ -4,6 +4,8 @@ const path = require("path");
 const express = require("express");
 const uuid = require("uuid");
 
+const resData = require('./util/restaurant-data');
+
 const app = express();
 
 app.set("views", path.join(__dirname, "views"));
